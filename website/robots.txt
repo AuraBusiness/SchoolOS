@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://aurabusiness.github.io/SchoolOS/sitemap.xml
