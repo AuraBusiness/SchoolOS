@@ -1,0 +1,16 @@
+﻿{
+  "name":"SchoolOS",
+  "short_name":"SchoolOS",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#0B0A09",
+  "theme_color":"#B06010",
+  "description":"SchoolOS — إدارة المدرسة بذكاء.",
+  "icons":[
+    {
+      "src":"assets/schoolos-icon.jpg",
+      "sizes":"1254x1254",
+      "type":"image/jpeg"
+    }
+  ]
+}
