@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -42,7 +42,287 @@
   ]
 }
 </script>
-</head>
+
+<style>
+/* ===== SCHOOLOS PREMIUM PRICING ===== */
+
+.pricing {
+  padding: 90px 24px;
+  position: relative;
+}
+
+.pricing .section-heading {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.pricing .section-heading .eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(54, 169, 214, 0.12);
+  color: #36A9D6;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.pricing .section-heading h2 {
+  margin: 0 0 15px;
+  font-size: clamp(30px, 4vw, 46px);
+  color: #163A5F;
+}
+
+.pricing .section-heading p {
+  margin: 0;
+  color: #66788a;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.pricing-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 27px 27px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(22,58,95,.09);
+  box-shadow: 0 18px 50px rgba(22,58,95,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+  overflow: hidden;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 65px rgba(22,58,95,.14);
+}
+
+.price-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: #36A9D6;
+}
+
+.price-card.starter::before {
+  background: #36A9D6;
+}
+
+.price-card.school::before {
+  background: #163A5F;
+}
+
+.price-card.pro::before {
+  background: linear-gradient(90deg, #36A9D6, #163A5F);
+}
+
+.price-card.enterprise::before {
+  background: #536b80;
+}
+
+.price-card.featured {
+  transform: translateY(-8px);
+  border: 2px solid rgba(54,169,214,.45);
+  box-shadow: 0 28px 70px rgba(54,169,214,.18);
+}
+
+.price-card.featured:hover {
+  transform: translateY(-13px);
+}
+
+.featured-label {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #163A5F;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.price-top {
+  margin-bottom: 20px;
+}
+
+.price-badge {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(54,169,214,.10);
+  color: #36A9D6;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.price-top h3 {
+  margin: 0 0 7px;
+  color: #163A5F;
+  font-size: 27px;
+}
+
+.price-top p {
+  margin: 0;
+  color: #7a8997;
+  font-size: 13px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+
+.price strong {
+  color: #163A5F;
+  font-size: 43px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.price span {
+  color: #7a8997;
+  font-size: 12px;
+}
+
+.yearly {
+  min-height: 25px;
+  color: #36A9D6;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  flex: 1;
+}
+
+.price-features li {
+  position: relative;
+  padding: 9px 25px 9px 0;
+  border-bottom: 1px solid rgba(22,58,95,.06);
+  color: #536474;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.price-features li::before {
+  content: "✓";
+  position: absolute;
+  right: 0;
+  top: 8px;
+  color: #36A9D6;
+  font-weight: 900;
+}
+
+.price-button {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 13px;
+  background: #163A5F;
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.price-button:hover {
+  opacity: .92;
+  transform: translateY(-2px);
+}
+
+.price-button.primary {
+  background: linear-gradient(135deg, #36A9D6, #163A5F);
+  box-shadow: 0 10px 25px rgba(54,169,214,.22);
+}
+
+.pricing-note {
+  max-width: 850px;
+  margin: 34px auto 0;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(54,169,214,.18);
+  border-radius: 17px;
+  background: rgba(54,169,214,.06);
+  text-align: center;
+}
+
+.pricing-note strong {
+  color: #163A5F;
+  font-size: 14px;
+}
+
+.pricing-note span {
+  color: #687988;
+  font-size: 12px;
+}
+
+@media (max-width: 1050px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 850px;
+  }
+
+  .price-card.featured {
+    transform: none;
+  }
+
+  .price-card.featured:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 620px) {
+  .pricing {
+    padding: 65px 16px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+  }
+
+  .price-card {
+    padding: 29px 23px 23px;
+  }
+
+  .price strong {
+    font-size: 40px;
+  }
+
+  .pricing-note {
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: right;
+  }
+}
+</style></head>
 
 <body>
 
@@ -465,67 +745,150 @@
 </section>
 
 <section id="pricing" class="pricing">
-  <div class="section-title">
-    <span>PLANS</span>
-    <h2>كل الباقات هنا.</h2>
-    <p>لماذا صفحة أسعار منفصلة؟ كل شيء أصبح داخل الموقع نفسه.</p>
+
+  <div class="section-heading">
+    <span class="eyebrow">أسعار الإطلاق</span>
+    <h2>اختر الباقة المناسبة لمدرستك</h2>
+    <p>
+      ابدأ مجانًا لمدة 7 أيام، ثم اختر الباقة التي تناسب حجم مدرستك.
+      أسعار الإطلاق الحالية مخصصة للمدارس الأولى.
+    </p>
   </div>
 
   <div class="pricing-grid">
 
-    <article class="price-card trial">
+    <article class="price-card starter">
       <div class="price-top">
-        <span class="price-tag">FREE TRIAL</span>
-        <span class="price-badge">7 أيام</span>
+        <span class="price-badge">للبداية</span>
+        <h3>Starter</h3>
+        <p>للمدارس الصغيرة</p>
       </div>
 
-      <h3>النسخة التجريبية</h3>
-
-      <p>
-        تعرّف على SchoolOS، استكشف الواجهات،
-        واختبر تجربة إدارة المدرسة قبل اتخاذ القرار.
-      </p>
-
-      <div class="price-list">
-        <span>✓ مدة 7 أيام</span>
-        <span>✓ واجهة SchoolOS الكاملة</span>
-        <span>✓ تجربة الوظائف الأساسية</span>
-        <span>✓ لا التزام</span>
+      <div class="price">
+        <strong>€9</strong>
+        <span>/ شهريًا</span>
       </div>
 
-      <a href="#download" class="price-btn light">
-        ابدأ التجربة
-        <b>←</b>
+      <div class="yearly">
+        أو €90 سنويًا
+      </div>
+
+      <ul class="price-features">
+        <li>حتى 100 طالب</li>
+        <li>إدارة الطلاب والمعلمين</li>
+        <li>الحضور والغياب</li>
+        <li>الواجبات والاختبارات</li>
+        <li>التقارير الأساسية</li>
+        <li>الدعم والتحديثات</li>
+      </ul>
+
+      <a class="price-button" href="#download">
+        ابدأ تجربتك المجانية
       </a>
     </article>
 
-    <article class="price-card full">
+
+    <article class="price-card school">
       <div class="price-top">
-        <span class="price-tag">FULL VERSION</span>
-        <span class="price-badge gold">PRO</span>
+        <span class="price-badge">الأكثر طلبًا</span>
+        <h3>School</h3>
+        <p>للمدارس المتوسطة</p>
       </div>
 
-      <h3>النسخة الكاملة</h3>
-
-      <p>
-        الحل المخصص للمدارس التي تريد الانتقال من التجربة
-        إلى التشغيل الفعلي على SchoolOS.
-      </p>
-
-      <div class="price-list">
-        <span>✓ تشغيل فعلي للمدرسة</span>
-        <span>✓ الميزات المتقدمة</span>
-        <span>✓ البنية السحابية والاشتراك</span>
-        <span>✓ تطوير مستمر للمنصة</span>
+      <div class="price">
+        <strong>€19</strong>
+        <span>/ شهريًا</span>
       </div>
 
-      <a href="#download" class="price-btn dark">
-        احصل على النسخة الكاملة
-        <b>←</b>
+      <div class="yearly">
+        أو €190 سنويًا
+      </div>
+
+      <ul class="price-features">
+        <li>حتى 300 طالب</li>
+        <li>جميع ميزات Starter</li>
+        <li>إدارة الصفوف</li>
+        <li>الإشعارات</li>
+        <li>التحليلات المدرسية</li>
+        <li>التقارير المتقدمة</li>
+      </ul>
+
+      <a class="price-button" href="#download">
+        ابدأ تجربتك المجانية
+      </a>
+    </article>
+
+
+    <article class="price-card pro featured">
+      <div class="featured-label">⭐ أفضل قيمة</div>
+
+      <div class="price-top">
+        <span class="price-badge">احترافي</span>
+        <h3>Pro</h3>
+        <p>للمدارس الكبيرة</p>
+      </div>
+
+      <div class="price">
+        <strong>€29</strong>
+        <span>/ شهريًا</span>
+      </div>
+
+      <div class="yearly">
+        أو €290 سنويًا
+      </div>
+
+      <ul class="price-features">
+        <li>حتى 600 طالب</li>
+        <li>جميع ميزات School</li>
+        <li>تحليلات متقدمة</li>
+        <li>تقارير شاملة</li>
+        <li>إدارة مدرسية متقدمة</li>
+        <li>أولوية في الدعم</li>
+      </ul>
+
+      <a class="price-button primary" href="#download">
+        ابدأ تجربتك المجانية
+      </a>
+    </article>
+
+
+    <article class="price-card enterprise">
+      <div class="price-top">
+        <span class="price-badge">للمؤسسات</span>
+        <h3>Enterprise</h3>
+        <p>للمدارس والمؤسسات الكبيرة</p>
+      </div>
+
+      <div class="price">
+        <strong>€49+</strong>
+        <span>/ شهريًا</span>
+      </div>
+
+      <div class="yearly">
+        حسب حجم المؤسسة
+      </div>
+
+      <ul class="price-features">
+        <li>أكثر من 600 طالب</li>
+        <li>جميع ميزات Pro</li>
+        <li>دعم المؤسسات</li>
+        <li>إعداد مخصص</li>
+        <li>إدارة متعددة المدارس</li>
+        <li>حلول مخصصة حسب الحاجة</li>
+      </ul>
+
+      <a class="price-button" href="#download">
+        تواصل معنا
       </a>
     </article>
 
   </div>
+
+  <div class="pricing-note">
+    <strong>🎁 تجربة مجانية لمدة 7 أيام</strong>
+    <span>لا تحتاج إلى دفع أثناء التجربة. بعد انتهائها يمكنك اختيار الباقة المناسبة.</span>
+  </div>
+
 </section>
 
 <section id="download" class="download">
@@ -777,3 +1140,5 @@
 
 </body>
 </html>
+
+
