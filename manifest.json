@@ -8,9 +8,10 @@
   "description":"SchoolOS — إدارة المدرسة بذكاء.",
   "icons":[
     {
-      "src":"assets/schoolos-icon.jpg",
+      "src":"assets/aqelyra-icon.jpg",
       "sizes":"1254x1254",
       "type":"image/jpeg"
     }
   ]
 }
+
